@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Configuration;
 using System.Net;
 using System.Net.Mail;
-using System.Web;
 using System.Web.Mvc;
 
 namespace HighconWebsite.Controllers
@@ -34,21 +32,23 @@ namespace HighconWebsite.Controllers
         }
 
         [HttpPost]
-        public ActionResult Contact(string name, string u_email, string subject, string message)
+        public ActionResult Contact(string name, string uEmail, string subject, string message)
         {
             try
             {
-                string from = System.Configuration.ConfigurationManager.AppSettings.Get("UserID");
-                string password = System.Configuration.ConfigurationManager.AppSettings.Get("Password");
-                using (MailMessage email = new MailMessage(from, "info@highcontech.com"))
+                var from = ConfigurationManager.AppSettings.Get("UserID");
+                var password = ConfigurationManager.AppSettings.Get("Password");
+                using (var email = new MailMessage(from, "info@highcontech.com"))
                 {
                     email.Subject = "Contact - " + subject;
-                    email.Body = name + " sent a message from within the ganaf website. \nMessage Content: \n" + message + "\n\nEmail Address: " + u_email;
+                    email.Body = name + " sent a message from within the ganaf website. \nMessage Content: \n" + message + "\n\nEmail Address: " + uEmail;
                     email.IsBodyHtml = false;
-                    SmtpClient smtp = new SmtpClient();
-                    smtp.Host = "smtp.gmail.com";
-                    smtp.EnableSsl = true;
-                    NetworkCredential networkCredential = new NetworkCredential(from, password);
+                    var smtp = new SmtpClient
+                    {
+                        Host = "smtp.gmail.com",
+                        EnableSsl = true
+                    };
+                    var networkCredential = new NetworkCredential(from, password);
                     smtp.UseDefaultCredentials = true;
                     smtp.Credentials = networkCredential;
                     smtp.Port = 587;
@@ -69,6 +69,11 @@ namespace HighconWebsite.Controllers
         public ActionResult Services()
         {
             return View();
+        }
+
+        public ActionResult Products()
+        {
+            return null;
         }
     }
 }

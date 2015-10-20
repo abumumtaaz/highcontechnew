@@ -6,7 +6,7 @@
 {
     <!-- banner start -->
     <!-- ================ -->
-    <div class="banner dark-translucent-bg" style="background-image: url('images/page-contact-banner.jpg'); background-position: 50% 30%;">
+    <div class="banner dark-translucent-bg" style="background-image: url('~/Content/images/page-contact-banner.jpg'); background-position: 50% 30%;">
         <!-- breadcrumb start -->
         <!-- ================ -->
         <div class="breadcrumb-container">
@@ -41,14 +41,23 @@
                 <!-- ================ -->
                 <div class="main col-md-8 space-bottom">
                     <p class="lead">It would be great to hear from you! Just drop us a line and ask for anything with which you think we could be helpful. We are looking forward to hearing from you!</p>
-                    <div class="alert alert-success hidden" id="MessageSent">
-                        We have received your message, we will contact you very soon.
-						
-                    </div>
-                    <div class="alert alert-danger hidden" id="MessageNotSent">
-                        Oops! Something went wrong please refresh the page and try again.
-						
-                    </div>
+                    @{
+                        if (ViewBag.Status == "SUCCESS")
+                        {
+                            <div class="alert alert-success hidden" id="MessageSent">
+                                We have received your message, we will contact you very soon.
+
+                            </div>
+                        }
+                        else if(ViewBag.Status == "ERROR")
+                        {
+                            <div class="alert alert-danger hidden" id="MessageNotSent">
+                                Oops! Something went wrong please refresh the page and try again.
+                            </div>
+                        }
+                    }
+
+                    
                     <div class="contact-form">
                         @using (Html.BeginForm())
                         {

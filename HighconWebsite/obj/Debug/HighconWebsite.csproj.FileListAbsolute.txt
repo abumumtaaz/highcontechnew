@@ -8,6 +8,7 @@ F:\Javaclass2\HighconWebsite\HighconWebsite\bin\DotNetOpenAuth.OAuth.dll
 F:\Javaclass2\HighconWebsite\HighconWebsite\bin\DotNetOpenAuth.OpenId.dll
 F:\Javaclass2\HighconWebsite\HighconWebsite\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
 F:\Javaclass2\HighconWebsite\HighconWebsite\bin\EntityFramework.dll
+F:\Javaclass2\HighconWebsite\HighconWebsite\bin\Highcon.Logic.dll
 F:\Javaclass2\HighconWebsite\HighconWebsite\bin\Microsoft.Web.Infrastructure.dll
 F:\Javaclass2\HighconWebsite\HighconWebsite\bin\Microsoft.Web.WebPages.OAuth.dll
 F:\Javaclass2\HighconWebsite\HighconWebsite\bin\Newtonsoft.Json.dll
@@ -24,6 +25,7 @@ F:\Javaclass2\HighconWebsite\HighconWebsite\bin\System.Web.WebPages.Razor.dll
 F:\Javaclass2\HighconWebsite\HighconWebsite\bin\WebGrease.dll
 F:\Javaclass2\HighconWebsite\HighconWebsite\bin\WebMatrix.Data.dll
 F:\Javaclass2\HighconWebsite\HighconWebsite\bin\WebMatrix.WebData.dll
+F:\Javaclass2\HighconWebsite\HighconWebsite\bin\Highcon.Logic.pdb
 F:\Javaclass2\HighconWebsite\HighconWebsite\bin\EntityFramework.xml
 F:\Javaclass2\HighconWebsite\HighconWebsite\bin\Newtonsoft.Json.xml
 F:\Javaclass2\HighconWebsite\HighconWebsite\bin\System.Net.Http.Formatting.xml

@@ -1,0 +1,4 @@
+F:\Javaclass2\HighconWebsite\Highcon.Logic\bin\Debug\Highcon.Logic.dll
+F:\Javaclass2\HighconWebsite\Highcon.Logic\bin\Debug\Highcon.Logic.pdb
+F:\Javaclass2\HighconWebsite\Highcon.Logic\obj\Debug\Highcon.Logic.dll
+F:\Javaclass2\HighconWebsite\Highcon.Logic\obj\Debug\Highcon.Logic.pdb
